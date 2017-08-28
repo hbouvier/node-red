@@ -21,7 +21,11 @@ module.exports = function(RED) {
     var cookieParser = require("cookie-parser");
     var getBody = require('raw-body');
     var cors = require('cors');
-    var jsonParser = bodyParser.json();
+    var jsonParser = bodyParser.json({
+            verify: function(req, res, buf, encoding) {
+                req.rawBody = buf.toString();
+            }
+        });
     var urlencParser = bodyParser.urlencoded({extended:true});
     var onHeaders = require('on-headers');
     var typer = require('media-typer');
