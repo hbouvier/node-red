@@ -1,6 +1,6 @@
 {
     "name": "node-red-studio",
-    "version": "0.17.5",
+    "version": "0.17.5-0002",
     "description": "A visual tool for wiring the Internet of Things",
     "homepage": "http://nodered.org",
     "license": "Apache-2.0",
